@@ -1,8 +1,8 @@
 Avatar Wall for Elgg 1.9
-Latest Version: 1.9.3
-Released: 2013-08-20
+Latest Version: 1.9.4
+Released: 2014-09-20
 License: GNU Public License version 2
-(C) iionly 2012-2013 (for Elgg 1.8 + Elgg1.9), (C) ColdTrick IT Solutions 2009-2013
+(C) iionly 2012-2014 (for Elgg 1.8 + Elgg1.9), (C) ColdTrick IT Solutions 2009-2014
 Contact: iionly@gmx.de
 
 
@@ -23,9 +23,18 @@ Installation:
 
 Version History:
 
+1.9.4 (by iionly):
+
+- Updated version 1.8.4 for Elgg 1.9.
+
+1.8.4 (by iionly):
+
+- Layout adjustments (breadcrumps and title section) to better match the typical Elgg page layout,
+- Some code cleanup.
+
 1.9.3 (by iionly):
 
-- updated for Elgg 1.9.
+- Updated version 1.8.3 for Elgg 1.9.
 
 1.8.3 (by iionly):
 
@@ -36,11 +45,14 @@ Version History:
 - French translation added (thanks to emanwebdev),
 - German translation added.
 
-1.8.1 (by iionly)
-    - tabs for displaying avatars of members logged in today, last week or all.
+1.8.1 (by iionly):
 
-1.8.0 (by iionly)
-    - updated for Elgg 1.8.
+- Tabs for displaying avatars of members logged in today, last week or all.
+
+1.8.0 (by iionly):
+
+- Updated for Elgg 1.8.
 
 1.0
-    - first release to the public.
+
+- First release to the public.
