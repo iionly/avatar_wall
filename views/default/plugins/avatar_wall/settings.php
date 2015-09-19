@@ -7,7 +7,7 @@
  * @copyright Coldtrick IT Solutions 2009-2014
  * @link http://www.coldtrick.com/
  *
- * for Elgg 1.9 by iionly (iionly@gmx.de)
+ * for Elgg 1.8 and newer by iionly (iionly@gmx.de)
 */
 ?>
 
