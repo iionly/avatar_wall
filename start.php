@@ -18,27 +18,16 @@ function avatar_wall_init() {
 	elgg_register_page_handler('avatar_wall', 'avatar_wall_page_handler');
 
 	// Extend system CSS with our own styles
-	elgg_extend_view('css/elgg','avatar_wall/css');
+	elgg_extend_view('elgg.css','avatar_wall/avatar_wall.css');
 
-	elgg_register_menu_item('site', array('name' => elgg_echo('avatar_wall:shorttitle'),
+	elgg_register_menu_item('site', [
+		'name' => elgg_echo('avatar_wall:shorttitle'),
 		'text' => elgg_echo('avatar_wall:shorttitle'),
-		'href' => elgg_get_site_url() . 'avatar_wall'
-	));
+		'href' => elgg_get_site_url() . 'avatar_wall',
+	]);
 }
 
-function avatar_wall_page_handler($page) {
-
-	elgg_push_breadcrumb(elgg_echo('avatar_wall:title'));
-
-	$title = elgg_echo('avatar_wall:title');
-
-	$area = elgg_view('avatar_wall/wall');
-
-	// Format page
-	$body = elgg_view('page/layouts/one_column', array('content' => $area, 'title' => $title));
-
-	// Draw it
-	echo elgg_view_page(elgg_echo('avatar_wall:title'), $body);
-
+function avatar_wall_page_handler() {
+	echo elgg_view_resource('avatar_wall/wall');
 	return true;
 }

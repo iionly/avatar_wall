@@ -9,23 +9,37 @@
  *
  * for Elgg 1.8 and newer by iionly (iionly@gmx.de)
 */
-?>
 
-<p>
-	<?php echo elgg_echo("avatar_wall:settings:onlywithavatar");?>
-	<select name="params[onlyWithAvatar]">
-		<option value="yes" <?php if ($vars['entity']->onlyWithAvatar == 'yes') echo " selected=\"yes\" "; ?>><?php echo elgg_echo('option:yes'); ?></option>
-		<option value="no" <?php if ($vars['entity']->onlyWithAvatar == 'no' || empty($vars['entity']->onlyWithAvatar)) echo " selected=\"yes\" "; ?>><?php echo elgg_echo('option:no'); ?></option>
-	</select>
-	<br /><br />
+$entity = elgg_extract('entity', $vars);
 
-	<?php echo elgg_echo("avatar_wall:settings:iconsize");?>
-	<select name="params[wallIconSize]">
-		<option value="tiny" <?php if ($vars['entity']->wallIconSize == 'tiny') echo " selected=\"yes\" "; ?>><?php echo elgg_echo('avatar_wall:settings:tiny'); ?></option>
-		<option value="small" <?php if ($vars['entity']->wallIconSize == 'small' || empty($vars['entity']->wallIconSize)) echo " selected=\"yes\" "; ?>><?php echo elgg_echo('avatar_wall:settings:small'); ?></option>
-	</select>
-	<br /><br />
+echo elgg_view_field([
+	'#type' => 'select',
+	'#label' => elgg_echo("avatar_wall:settings:onlywithavatar"),
+	'name' => 'params[onlyWithAvatar]',
+	'options_values' => [
+		'yes' => elgg_echo('option:yes'),
+		'no' => elgg_echo('option:no'),
+	],
+	'value' => $entity->onlyWithAvatar ? : 'yes',
+]);
 
-	<?php echo elgg_echo("avatar_wall:settings:maxicons"); ?><br />
-	<input type="text" name="params[maxIcons]" value="<?php if(!empty($vars['entity']->maxIcons)){ echo $vars['entity']->maxIcons; } else { echo "300"; }?>"/>
-</p>
+echo elgg_view_field([
+	'#type' => 'select',
+	'#label' => elgg_echo("avatar_wall:settings:iconsize"),
+	'name' => 'params[wallIconSize]',
+	'options_values' => [
+		'tiny' => elgg_echo('avatar_wall:settings:tiny'),
+		'small' => elgg_echo('avatar_wall:settings:small'),
+		'medium' => elgg_echo('avatar_wall:settings:medium'),
+	],
+	'value' => $entity->wallIconSize ? : 'small',
+]);
+
+echo elgg_view_field([
+	'#type' => 'number',
+	'#label' => elgg_echo("avatar_wall:settings:maxicons"),
+	'name' => 'params[maxIcons]',
+	'value' => (int)$entity->wallIconSize ? : 300,
+	'min' => 1,
+	'step' => 1,
+]);

@@ -1,5 +1,5 @@
 <?php
-return array(
+return [
 	'avatar_wall' => "Mur des Avatars",
 	'avatar_wall:title' => "Le Mur des Avatars",
 	'avatar_wall:shorttitle' => "Mur des Avatars",
@@ -8,9 +8,10 @@ return array(
 	'avatar_wall:week' => "Membres actifs cette semaine",
 	'avatar_wall:all' => "Tous les membres",
 
-	'avatar_wall:settings:onlywithavatar' => "Afficher uniquement les utilisateurs avec un avatar personnalisé? ",
+	'avatar_wall:settings:onlywithavatar' => "Afficher uniquement les utilisateurs avec un avatar personnalisé?",
 	'avatar_wall:settings:tiny' => "Minuscule",
 	'avatar_wall:settings:small' => "Petite",
-	'avatar_wall:settings:iconsize' => "Quelle taille d'icône doit être utilisée sur le mur? ",
-	'avatar_wall:settings:maxicons' => "Indiquez le nombre maximum d'icônes sur le mur:"
-);
+	'avatar_wall:settings:medium' => "Medium",
+	'avatar_wall:settings:iconsize' => "Quelle taille d'icône doit être utilisée sur le mur?",
+	'avatar_wall:settings:maxicons' => "Indiquez le nombre maximum d'icônes sur le mur",
+];

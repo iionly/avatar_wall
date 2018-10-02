@@ -1,8 +1,8 @@
-Avatar Wall for Elgg 1.9 - 1.12 and Elgg 2.X
-============================================
+Avatar Wall for Elgg 2.3 and newer Elgg 2.X
+===========================================
 
-Latest Version: 1.9.5  
-Released: 2015-09-19  
+Latest Version: 2.3.6  
+Released: 2018-08-07  
 License: GNU Public License version 2  
 (C) iionly 2012 (for Elgg 1.8 and newer), (C) ColdTrick IT Solutions 2009
 Contact: iionly@gmx.de
@@ -13,7 +13,7 @@ Description
 
 The plugin will display a page with the avatars of all members on your site. Members can select via tabs to display only avatars of members who have been "active today", "active within this week" or "all" respectively.
 
-You can configure to include also members with Elgg's default avatar (grey head) on the avatar wall or to display only members with custom avatars. You can select between iconsize "tiny" or "small". And you can define the maximum number of avatars to be displayed.
+You can configure to include also members with Elgg's default avatar (grey head) on the avatar wall or to display only members with custom avatars. You can select between iconsize "tiny", "small" or "medium". And you can define the maximum number of avatars to be displayed.
 
 
 Installation

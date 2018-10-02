@@ -1,33 +1,26 @@
 <?php
 
-$users_max = elgg_get_plugin_setting("maxIcons", "avatar_wall");
-if(!$users_max) {
-	$users_max = 300;
+$users_max = (int) elgg_get_plugin_setting("maxIcons", "avatar_wall", 300);
+$onlyWithAvatar = elgg_get_plugin_setting("onlyWithAvatar", "avatar_wall", "yes");
+$wallIconSize = elgg_get_plugin_setting("wallIconSize", "avatar_wall", "small");
+
+if ($onlyWithAvatar == "no") {
+	$users = elgg_get_entities([
+		'type' => 'user',
+		'limit' => $users_max,
+	]);
+} else {
+	$users = elgg_get_entities_from_metadata([
+		'metadata_name' => 'icontime',
+		'type' => 'user',
+		'limit' => $users_max,
+	]);
 }
 
-$onlyWithAvatar = elgg_get_plugin_setting("onlyWithAvatar", "avatar_wall");
-if(empty($onlyWithAvatar) || $onlyWithAvatar == "no") {
-	$users = elgg_get_entities(array('type' => 'user', 'limit' => $users_max));
-} else {
-	$users = elgg_get_entities_from_metadata(array(
-		'metadata_names' => 'icontime',
-		'types' => 'user',
-		'limit' => $users_max,
-		'full_view' => false,
-		'pagination' => false
-	));
-}
-$wallIconSize = elgg_get_plugin_setting("wallIconSize", "avatar_wall");
-if(!$wallIconSize) {
-	$wallIconSize = "small";
-}
 shuffle($users);
 
-?>
-<div align='center'>
-<?php
+echo "<div align='center'>";
 foreach($users as $user) {
-	echo "<a href='" . $user->getURL() . "'><img class='wall_icons' alt='" . $user->name . "' src='". $user->getIconURL($wallIconSize) . "'><a/>";
+	echo elgg_format_element('a', ['href' => $user->getURL()], elgg_format_element('img', ['class' => 'wall_icons', 'alt' => $user->name, 'src' => $user->getIconURL($wallIconSize)], ''));
 }
-?>
-</div>
+echo "</div>";
