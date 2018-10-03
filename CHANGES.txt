@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.7 (by iionly)
+-----------------
+
+- Fix on plugin settings page to correctly display and save maxIcons number input.
+
 2.3.6 (by iionly)
 -----------------
 

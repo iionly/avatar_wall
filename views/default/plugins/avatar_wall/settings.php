@@ -39,7 +39,7 @@ echo elgg_view_field([
 	'#type' => 'number',
 	'#label' => elgg_echo("avatar_wall:settings:maxicons"),
 	'name' => 'params[maxIcons]',
-	'value' => (int)$entity->wallIconSize ? : 300,
+	'value' => (int) $entity->maxIcons ? : 300,
 	'min' => 1,
 	'step' => 1,
 ]);
