@@ -1,8 +1,8 @@
 Avatar Wall for Elgg 2.3 and newer Elgg 2.X
 ===========================================
 
-Latest Version: 2.3.7  
-Released: 2018-10-03  
+Latest Version: 2.3.8  
+Released: 2018-11-01  
 License: GNU Public License version 2  
 (C) iionly 2012 (for Elgg 1.8 and newer), (C) ColdTrick IT Solutions 2009
 Contact: iionly@gmx.de

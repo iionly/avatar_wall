@@ -28,6 +28,7 @@ function avatar_wall_init() {
 }
 
 function avatar_wall_page_handler() {
-	echo elgg_view_resource('avatar_wall/wall');
+	$tab = get_input('tab', 'today');
+	echo elgg_view_resource('avatar_wall/wall', ['tab' => $tab]);
 	return true;
 }

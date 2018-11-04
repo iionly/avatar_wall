@@ -1,6 +1,6 @@
 <?php
 
-$selected_tab = get_input('tab', 'today');
+$selected_tab = elgg_extract('tab', $vars, 'today');
 $tabs = ['today', 'week', 'all'];
 $params = [
 	'tabs' => [],
@@ -18,8 +18,8 @@ foreach ($tabs as $tab) {
 
 $content = elgg_view('navigation/tabs', $params);
 
-if (elgg_view_exists("avatar_wall/{$tab}")) {
-	$content .= elgg_view("avatar_wall/{$tab}");
+if (elgg_view_exists("avatar_wall/{$selected_tab}")) {
+	$content .= elgg_view("avatar_wall/{$selected_tab}");
 }
 
 // Format page

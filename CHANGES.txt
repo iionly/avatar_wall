@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3.8 (by iionly)
+-----------------
+
+- Fix: display content of selected tab instead of always display content of "All" tab.
+
 2.3.7 (by iionly)
 -----------------
 
