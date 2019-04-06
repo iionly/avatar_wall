@@ -20,7 +20,7 @@ echo elgg_view_field([
 		'yes' => elgg_echo('option:yes'),
 		'no' => elgg_echo('option:no'),
 	],
-	'value' => $entity->onlyWithAvatar ? : 'yes',
+	'value' => $entity->onlyWithAvatar,
 ]);
 
 echo elgg_view_field([
@@ -32,14 +32,14 @@ echo elgg_view_field([
 		'small' => elgg_echo('avatar_wall:settings:small'),
 		'medium' => elgg_echo('avatar_wall:settings:medium'),
 	],
-	'value' => $entity->wallIconSize ? : 'small',
+	'value' => $entity->wallIconSize,
 ]);
 
 echo elgg_view_field([
 	'#type' => 'number',
 	'#label' => elgg_echo("avatar_wall:settings:maxicons"),
 	'name' => 'params[maxIcons]',
-	'value' => (int) $entity->maxIcons ? : 300,
+	'value' => (int) $entity->maxIcons,
 	'min' => 1,
 	'step' => 1,
 ]);

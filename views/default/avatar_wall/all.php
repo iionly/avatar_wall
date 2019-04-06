@@ -1,21 +1,20 @@
 <?php
 
-$users_max = (int) elgg_get_plugin_setting("maxIcons", "avatar_wall", 300);
-$onlyWithAvatar = elgg_get_plugin_setting("onlyWithAvatar", "avatar_wall", "yes");
-$wallIconSize = elgg_get_plugin_setting("wallIconSize", "avatar_wall", "small");
+$users_max = (int) elgg_get_plugin_setting('maxIcons', 'avatar_wall');
+$onlyWithAvatar = elgg_get_plugin_setting('onlyWithAvatar', 'avatar_wall');
+$wallIconSize = elgg_get_plugin_setting('wallIconSize', 'avatar_wall');
 
-if ($onlyWithAvatar == "no") {
-	$users = elgg_get_entities([
-		'type' => 'user',
-		'limit' => $users_max,
-	]);
-} else {
-	$users = elgg_get_entities_from_metadata([
-		'metadata_name' => 'icontime',
-		'type' => 'user',
-		'limit' => $users_max,
-	]);
+$params = [
+	'type' => 'user',
+	'subtype' => 'user',
+	'limit' => $users_max,
+];
+
+if ($onlyWithAvatar == "yes") {
+	$params['metadata_name'] = 'icontime';
 }
+
+$users = elgg_get_entities($params);
 
 shuffle($users);
 

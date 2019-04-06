@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.0.0 (by iionly)
+-----------------
+
+- Elgg 3.0 required at minimum,
+- Updated for Elgg 3.
+
 2.3.8 (by iionly)
 -----------------
 
