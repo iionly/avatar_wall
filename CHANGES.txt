@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.0.1 (by iionly)
+-----------------
+
+- Fixed deprecated "Passing 'title' instead of 'text' to the navigation/tabs tab",
+- Fixed deprecated "Passing 'url' to the navigation/tabs tab".
+
 3.0.0 (by iionly)
 -----------------
 

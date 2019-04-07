@@ -8,8 +8,8 @@ $params = [
 
 foreach ($tabs as $tab) {
 	$params['tabs'][] = [
-		'title' => elgg_echo("avatar_wall:{$tab}"),
-		'url' => "avatar_wall/{$tab}",
+		'text' => elgg_echo("avatar_wall:{$tab}"),
+		'href' => "avatar_wall/{$tab}",
 		'selected' => ($tab === $selected_tab),
 	];
 }
