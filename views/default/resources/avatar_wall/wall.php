@@ -1,7 +1,8 @@
 <?php
 
-$selected_tab = elgg_extract('tab', $vars, 'today');
+$selected_tab = elgg_extract('tab', $vars);
 $tabs = ['today', 'week', 'all'];
+$selected_tab = (in_array($selected_tab, $tabs)) ? $selected_tab : 'today';
 $params = [
 	'tabs' => [],
 ];
@@ -20,10 +21,12 @@ if (elgg_view_exists("avatar_wall/{$selected_tab}")) {
 	$content .= elgg_view("avatar_wall/{$selected_tab}");
 }
 
+$title = elgg_echo('avatar_wall:title');
+
 // Format page
 $body = elgg_view('page/layouts/default', [
 	'content' => $content,
-	'title' => elgg_echo('avatar_wall:title'),
+	'title' => $title,
 	'sidebar' => false,
 	'breadcrumbs' => [
 		[
@@ -34,4 +37,4 @@ $body = elgg_view('page/layouts/default', [
 ]);
 
 // Draw it
-echo elgg_view_page(elgg_echo('avatar_wall:title'), $body);
+echo elgg_view_page($title, $body);
