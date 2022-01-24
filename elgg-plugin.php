@@ -1,7 +1,17 @@
 <?php
 
 return [
-	'bootstrap' => \AvatarWallBootstrap::class,
+	'plugin' => [
+		'name' => 'Avatar Wall',
+		'version' => '4.0.0',
+	],
+	'hooks' => [
+		'register' => [
+			'menu:site' => [
+				'AvatarWall\Menus::AvatarWallSitemenu' => [],
+			],
+		],
+	],
 	'routes' => [
 		'avatar_wall' => [
 			'path' => '/avatar_wall/{tab?}',

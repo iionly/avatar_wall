@@ -1,8 +1,8 @@
-Avatar Wall for Elgg 3.3 and newer Elgg 3.X
+Avatar Wall for Elgg 4.0 and newer Elgg 4.X
 ===========================================
 
-Latest Version: 3.3.1  
-Released: 2020-08-25  
+Latest Version: 4.0.0  
+Released: 2022-01-24  
 License: GNU Public License version 2  
 (C) iionly 2012 (for Elgg 1.8 and newer), (C) ColdTrick IT Solutions 2009
 Contact: iionly@gmx.de
